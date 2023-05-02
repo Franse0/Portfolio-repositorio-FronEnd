@@ -1,0 +1,640 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+
+}
+
+:root{
+    --verdeA:#006414;
+    --verdeB:#009929;
+    --verdeC:#5ccb5f;
+    --negro:#121012;
+    --gris:#413e40;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #009929, #120112 );
+    margin: 0;
+}
+
+.fran-first-card{
+    position: relative;
+    display: flex;
+    gap: 26px;
+    font-size: 4rem;
+    cursor: pointer;
+}
+
+.fran-first-card span{
+    position: relative;
+    filter: blur(5px);
+    padding: 0 5px;
+    transition: .5s;
+    color: var(--verdeC);
+}
+
+.fran-first-card span:hover{
+    filter: blur(0);
+    transition: 0;
+}
+
+.fran-first-card span i {
+    position: absolute;
+    inset: 0;
+    background: transparent;
+}
+
+.fran-first-card span:hover i::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 8px;
+    background-color: #ffff;
+    box-shadow: 0 53px #ffff, 36px 53px #fff, 36px 0 #fff;
+}
+
+.fran-first-card span:hover i::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 8px;
+    height: 2px;
+    box-shadow: 0 60px #fff, 30px 60px #fff, 30px 0 #fff;
+    background-color: #fff;
+}
+
+
+
+@media (max-width: 700px){
+    .fran-first-card span{
+        filter: blur(0);
+        font-size: 2.5rem;
+    }
+}
+
+
+
+  /* Header y Nav */
+form{
+    display: none;
+}
+
+.abajo {
+    background: var(--verdeA);
+    display: flex;
+    transition: .2s;
+
+}
+
+header{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: var(--gris);
+    top: 0;
+    left: 0;
+    max-height: 60px;
+    display: none;
+    transition: 5s;
+    background: var(--verdeA);
+
+}
+
+.nav{
+    height: 60px; 
+    padding: 0 3rem;
+    transition: .9s;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.img-nav-contianer{
+    padding: 0 5rem;
+    width: 30%;
+}
+.img-nav{
+    width: 150px;
+}
+.nav ul{
+    display: flex;
+    padding: 2rem 1rem;
+    gap: 20px;
+    left: 0;
+    justify-content: right;
+}
+
+.nav ul li {
+    list-style: none;
+}
+
+.nav ul li a {
+    text-transform: uppercase;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+
+}
+
+.nav ul li a:hover{
+    background: var(--verdeB);
+    padding: .5rem 2rem;
+    border-radius: 30px;
+}
+
+
+.bars{
+    background: none;
+    border: none;
+}
+.bars i{
+    font-size: 1.5rem;
+    color: white;
+    display: none;
+}
+
+@media (max-width: 700px){
+    .nav ul li a{
+        font-size: .8rem;
+    }
+
+    .bars i{
+        display: block;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+
+    .nav{
+        position: absolute;
+        margin-top: 35px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        padding: 2rem;
+        background-color: #006414;
+        height: 100vh;
+        display: none;
+    }
+    .nav ul{
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .nav-visible{
+        display: block;
+    }
+
+    .img-nav{
+        width: 100px;
+    }
+
+    .img-nav-contianer{
+        display: flex;
+        align-items: center;
+        padding: 0 2rem;
+        width: 60%;
+    }
+}
+
+@media (max-width: 900px){
+    .nav ul li a{
+        font-size: .8rem;
+    }
+    .img-nav-contianer{
+        width: 30%;
+    }
+    .nav{
+        padding: 0 1rem;
+    }
+}
+
+
+/* Section uno acerca de mi */
+.acerca_de{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 8rem 2rem;
+    background: var(--negro);
+}
+
+.img-profile{
+    border-radius: 50%;
+    width: 350px;
+}
+
+.acerca_de_info-container{
+    padding: 1rem 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 50%;
+    gap: 20px;
+}
+
+h1{
+    font-size: 3rem;
+    color: var(--verdeC);
+}
+h2{
+    font-size: 2rem;
+    color: var(--verdeC);
+}
+
+.acerca_de_info-container p{
+    font-size: 1.4rem;
+    color: var(--verdeC);
+}
+
+@media (max-width: 700px){
+    .img-profile{
+        width: 200px;
+    }
+    h1{
+        font-size: 2rem;
+        color: var(--verdeC);
+    }
+    h2{
+        font-size: 1.5rem;
+        color: var(--verdeC);
+    }
+    
+    .acerca_de_info-container p{
+        font-size: 1rem;
+        min-width: 200px;
+        color: var(--verdeC);
+    }
+
+    .acerca_de{
+        flex-direction: column;
+        padding: 5rem 0;
+    }
+}
+
+
+/* Section 2 experiencia */
+
+.experiencia-cards-container ul{
+    display: flex;
+    gap:60px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: white;
+    flex-wrap: wrap;
+}
+.experiencia{
+    text-align: center;
+    padding: 5rem 2rem;
+    gap: 30px;
+    background: white;
+} 
+
+.experiencia-cards-container{
+    display: flex;
+    gap: 50px;
+}
+
+.experiencia h2 {
+    font-size: 3rem;
+    color: var(--negro);
+    padding: 5rem ;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.card{
+    width: 30%;
+    padding: 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    border-radius: 30px;
+    background: var(--verdeB);
+    color: white;
+    cursor: pointer;
+    min-height:400px;
+}
+
+.img-card-experiencia{
+    max-width: 250px;
+    width: 90%;
+    border-radius: 30px;
+}
+.card h3{
+    font-size: 2rem;
+}
+.card p{
+    font-size: 1.3rem;
+}
+
+.card:hover{
+    background: #120112;
+    transition: .9;
+}
+
+
+@media (max-width: 700px){
+    .experiencia{
+        padding: 3rem;
+        gap: 10px;
+    } 
+    
+    .experiencia-cards-container{
+        gap: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .experiencia h2 {
+        font-size: 2rem;
+    }
+    
+    .card{
+        width: 80%;
+        padding: 2rem 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        border-radius: 30px;
+        background: var(--verdeB);
+        color: white;
+        cursor: pointer;
+    }
+    
+    .img-card-experiencia{
+        width: 200px;
+    }
+    .card h3{
+        font-size: 1.5rem;
+    }
+    .card p{
+        font-size: 1rem;
+    }
+    
+    .card:hover{
+        background: #120112;
+        transition: .9;
+    }     
+}
+
+
+/* Section 3 educacion */
+.educacion{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 8rem 2rem;
+    background-color: white;
+    align-items: center;
+}
+
+.educacion h2{
+    font-size: 3rem;
+    padding: 5rem 8rem;
+    text-align: right;
+    width: 100%;
+    color: #120112;
+    text-transform: uppercase;
+}
+
+.intro-education{
+    padding: 0 8rem;
+    font-size: 1.5rem;
+    width: 60%;
+    text-align: center;
+    margin-bottom: 4rem;
+    font-family: sans-serif;
+}
+
+.card-education{
+    display: flex;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, .5);
+    padding: .5rem 2rem;
+    border-radius: 10px;
+    max-width: 80%;
+    min-height: 190px;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-card-education{
+    width: auto;
+    max-width: 200px;
+    height: 80px;
+}
+
+.container-info-education{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.container-info-education h3{
+    font-size: 2rem;
+    font-family: sans-serif;
+
+}
+
+.container-info-education p{
+    font-size: 1.3rem;
+    text-align: right;
+    padding: 0 3rem;
+    font-family: sans-serif;
+}
+
+.container-info-education a{
+    color: #121012;
+    text-decoration: none;
+    margin-left: 1rem;
+    font-family: sans-serif;
+
+}
+
+@media (max-width: 700px){
+    .educacion{
+        gap: 30px;
+        padding: 5rem 2rem;
+    }
+    
+    .educacion h2{
+        font-size: 2rem;
+        padding: 3rem 2rem;
+        text-align: right;
+        width: 100%;
+    }
+    
+    .intro-education{
+        padding: 0 5rem;
+        font-size: 1rem;
+        width: 100%;
+    }
+    
+    .card-education{
+        flex-direction: column;
+        max-width: 80%;
+        height: auto;
+    }
+    
+    .img-card-education{
+        margin-bottom: 20px;
+        max-width: 205px;
+        width: auto;
+    }
+    
+
+    .container-info-education h3{
+        font-size: 1.6rem;
+        text-align: left;
+    }
+    
+    .container-info-education p{
+        font-size: 1rem;
+        text-align: left;
+        padding: 0 2rem;
+    }
+    
+}
+
+
+
+/* Skills */
+.skills{
+    padding: 4rem 2rem;
+    min-height: 800px;
+}
+
+.skills h2{
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 3rem;
+    color: black;
+    padding: 3rem 5rem;
+    margin-bottom: 30px;
+}
+.cards-skills{
+    display: flex;
+    flex-wrap:wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.card-habilida-img{
+    width: auto;
+    max-width: 80px;
+}
+
+.cardd{
+    padding: 2rem;
+    border-radius: 50%;
+    border: 1px solid black;
+    width: 10%;
+    height: 150px;
+    min-width: 150px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.cardd:hover{
+    background-color: black;
+    color: white;
+    transition: all .5s;
+}
+
+@media (max-width: 700px){
+    .skills h2{
+        font-size: 2rem;
+    }
+}
+
+/* Section 5 o footee */
+.contactos{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 5rem 3rem;
+    background: var(--negro);
+    text-align: center;
+}
+
+.contactos h2{
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+
+.container-contactos{
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.img-contact{
+    width: 80px;
+    cursor: pointer;
+}
+
+.contactos p{
+    color: white;
+    font-size: 1.3rem;
+    margin-top: 50px;
+}
+
+.contactos p span{
+    color: red;
+}
+
+@media (max-width: 700px){
+    .contactos h2{
+        text-transform: uppercase;
+        font-size: 2rem;
+    }
+    
+    .container-contactos{
+        flex-direction: column;
+        gap: 50px;
+    }
+    
+    .img-contact{
+        width: 70px;
+    }   
+}
+
+
+
+
+/* Para pintar donde estoy en la barra de nav */
+.in-section{
+    background: var(--verdeB);
+    padding: .5rem 2rem;
+    border-radius: 30px;
+}
+
+/* Para esconder los botones de edicion y borrar */
+.in-login{
+    display: none;
+}

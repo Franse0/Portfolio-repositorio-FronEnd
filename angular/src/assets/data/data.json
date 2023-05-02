@@ -1,0 +1,98 @@
+{
+    "id": "1",
+    "nombre": "Francisco",
+    "apellido": "Marin Cruz",
+    "fecha_nacimiento": "08/08/1999",
+    "nacionalidad": "Argentino",
+    "mail": "panchymarin.gmgmail.com",
+    "sobre_mi": "Soy una persona super capaz con mucha falicidad para aprender y ademas muchisimas ganas. Soy progrmador autodidacta, se lo que es resolver problemas tanto en ceustiones de progrmacion como en la vida. Me gusta estar vivo y quiero llegar lejos.",
+    "ocupacion": "Programador Full Stack Developer Jr",
+    "educacion":[
+        {
+            "school":"UTN Buenos Aires multiplica",
+            "imgSchool":"https://utn.edu.ar/images/logo-utn.png",
+            "descripcion":"Un curso corto de maquetado y modelado con html css, boootstrap y javaScript enfocado en las buenas practicas.",
+            "start":"0/10/2022",
+            "end":"0/12/2022",
+            "certificado":""
+        },
+        {
+            "school":"Se programar",
+            "img-school":"https://www.concordia.gob.ar/sites/all/themes/programar/images/arg-programa.png",
+            "descripcion":"Primera instancia del programa Argentina programa del Gobierno de la Nación. Se abordó JavaScript y Rubi",
+            "start":"11/06/2022",
+            "end":"12/09/2022",
+            "certificado":""
+        },
+        {
+            "school":"Yo programo",
+            "img-school":"https://www.concordia.gob.ar/sites/all/themes/programar/images/arg-programa.png",
+            "descripcion":"Este es un curso full stack de programación orientada al desarrollo web. Los temas vistos son: html, css, JS, Ts, Angular, MySql, Java, JavaWeb y Springboot",
+            "start":"11/11/2022",
+            "end":"17/05/2023",
+            "certificado":""
+        },
+        {
+            "school":"Curso Full Stack Nucba",
+            "img-school":"https://images.ctfassets.net/t5yal6u1wvnw/6R3NODHEjSjCjICNoka6WL/35b689fa76c2d30d2e0e2de103b1bc44/Logo-Nucba.png",
+            "descripcion":"Un curso completo con clases sincronicas vrtuales donde vimos con ejemplos teoria ejercicios y un acompañamiento todo lo necesario para ingresar y tener un buen desarrollo en el mundo it",
+            "start":"08/08/2022",
+            "end":"",
+            "certificado":""
+        }
+    ],
+    "experiencia":[
+        {
+            "nombreExp":"Hilda Ales aseguradora",
+            "imgExp":"",
+            "descripcionExp":"Es mi primer pagina, hecha con angular, mySql, bootstrap entre otras tecnologias. Posee una base de datos y un login para que cada usuario que posea un seguro pueda entra a ver su estado"
+        },
+        {
+            "nombreExp":"Portfolio Francisco Marin",
+            "imgExp":"",
+            "descripcionExp":"Mi portfolio web desarrollado en el trancurso del curso Argentina Programa. Posee base de datos MySQL, esta escrito en Typescript, hecho con angular y Springboot"
+        },
+        {
+            "nombreExp":"Party time alto valle",
+            "imgExp":"",
+            "descripcionExp":"Una pagina web pensada para la difucion y promocion de los eventos de musica electronica y los diferentes artistas de la region, o los que van a venir a la zona."
+        }
+    ],
+    "image_perfil": "https://i2.wp.com/imagenes.milenio.com/E-yJnq9EhkZhWaU7T_2utkyTymQ=/958x596/smart/https://www.milenio.com/uploads/media/2018/10/05/steve-jobs-perdio-vida-consecuencia_0_199_1193_742.jpg?w=640&ssl=1",
+    "id_domicilio": "2",
+    "skills":[
+        {
+            "title":"JavaScript",
+            "imgSkill":"https://www.freepnglogos.com/uploads/javascript-png/javascript-logo-transparent-logo-javascript-images-3.png"
+        },
+        {
+            "title":"Angular",
+            "imgSkill":"https://assets.stickpng.com/images/62a79606e42d729d928b175f.png"
+        },
+        {
+            "title":"Java",
+            "imgSkill":"https://logos-world.net/wp-content/uploads/2022/07/Java-Logo.png"
+        },
+        {
+            "title":"Spring Boot",
+            "imgSkill":"https://e4developer.com/wp-content/uploads/2018/01/spring-boot.png"
+        },
+        {
+            "title":"MySql",
+            "imgSkill":"https://www.freepnglogos.com/uploads/logo-mysql-png/logo-mysql-mysql-and-moodle-elearningworld-5.png"
+        },
+        {
+            "title":"TypeScript",
+            "imgSkill":"https://cdn-icons-png.flaticon.com/512/919/919832.png"
+        },
+        {
+            "title":"Html",
+            "imgSkill":"https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/800px-HTML5_Badge.svg.png"
+        },
+        {
+            "title":"Css",
+            "imgSkill":"https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/800px-CSS3_logo.svg.png"
+        }
+    ]
+
+    }

@@ -1,0 +1,46 @@
+<!-- Section 2 experiencia -->
+<section class="experiencia" id="experiencia">
+  <h2>Experiencia</h2>
+  <div class="experiencia-cards-container">
+    <ul>
+      <li class="card" *ngFor="let experiencia of experienciaList">
+        <h3>{{experiencia.nombreExp}}</h3>
+        <img [src]="experiencia.imgExp" class="img-card-experiencia" alt="" />
+        <p>
+          {{experiencia.descripcionExp}}
+        </p>
+        <form class="in-login" id="in-login">
+          <i class="fa-solid fa-pen"></i>
+          <i class="fa-solid fa-trash"></i>
+        </form>
+      </li>
+    </ul>
+
+    <!-- <div class="card">
+      <h3>Portfolio Francisco Marin</h3>
+      <img src="" alt="" class="img-card-experiencia" />
+      <p>
+        Mi portfolio web desarrollado en el trancurso del curso Argentina
+        Programa. Posee base de datos MySQL, esta escrito en Typescript, hecho
+        con angular y Springboot
+      </p>
+      <form class="in-login">
+        <i class="fa-solid fa-pen"></i>
+        <i class="fa-solid fa-trash"></i>
+      </form>
+    </div>
+    <div class="card">
+      <h3>party Time alto valle</h3>
+      <img src="" alt="" class="img-card-experiencia" />
+      <p>
+        Una pagina web pensada para la difucion y promocion de los eventos de
+        musica electronica y los diferentes artistas de la region, o los que van
+        a venir a la zona.
+      </p>
+      <div class="in-login">
+        <i class="fa-solid fa-pen"></i>
+        <i class="fa-solid fa-trash"></i>
+      </div>
+    </div> -->
+  </div>
+</section>

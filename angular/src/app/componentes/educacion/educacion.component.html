@@ -1,0 +1,92 @@
+<!-- Section 3 educacion -->
+<section class="educacion">
+  <h2>Educación</h2>
+  <p class="intro-education">
+    "Como programador full stack junior, valoro mucho la educación y estoy
+    comprometido a seguir aprendiendo y mejorando mis habilidades
+    constantemente. Creo que la educación es un proceso continuo y esencial para
+    mantenerme actualizado en un entorno tecnológico en constante cambio."
+  </p>
+
+  <div class="card-education" *ngFor="let educacion of educacionList">
+    <img
+      [src]="educacion.imgEscuela"
+      alt=""
+      class="img-card-education"
+    />
+    <div class="container-info-education">
+      <h3>{{educacion.nombre}}</h3>
+      <p>
+        {{educacion.descripcion}}
+      </p>
+      <i class="fa-solid fa-magnifying-glass"
+        ><a
+          [href]="educacion.certificado"
+          target="_blank"
+          >ver certificado</a
+        ></i
+      >
+      <div class="in-login" id="in-login">
+        <i class="fa-solid fa-pen"></i>
+        <i class="fa-solid fa-trash"></i>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="card-education">
+    <img src="./assets/arg-programa.png" alt="" class="img-card-education" />
+    <div class="container-info-education">
+      <h3>Se programar</h3>
+      <p>
+        Primera instancia del programa Argentina programa del Gobierno de la
+        Nación. Se abordó JavaScript y Rubi
+      </p>
+      <i class="fa-solid fa-magnifying-glass"
+        ><a href="./assets/argentina_programa_2022.pdf" target="_blank"
+          >ver certificado</a
+        ></i
+      >
+      <div class="in-login" id="in-login">
+        <i class="fa-solid fa-pen"></i>
+        <i class="fa-solid fa-trash"></i>
+      </div>
+    </div>
+  </div> -->
+  <!-- <div class="card-education">
+    <img src="./assets/arg-programa.png" alt="" class="img-card-education" />
+    <div class="container-info-education">
+      <h3>Yo programo</h3>
+      <p>
+        Este es un curso full stack de programación orientada al desarrollo web.
+        Los temas vistos son: html, css, JS, Ts, Angular, MySql, Java, JavaWeb y
+        Springboot
+      </p>
+      <i class="fa-solid fa-magnifying-glass"
+        ><a href="#" target="_blank">ver certificado</a></i
+      >
+      <div class="in-login" id="in-login">
+        <i class="fa-solid fa-pen"></i>
+        <i class="fa-solid fa-trash"></i>
+      </div>
+    </div>
+  </div>
+  <div class="card-education">
+    <img
+      src="assets/Logo-Nucba.png"
+      alt=""
+      class="img-card-education"
+    />
+    <div class="container-info-education">
+      <h3>Curso Full Stack Nucba</h3>
+      <p>
+        Un curso completo con clases sincronicas vrtuales donde vimos con
+        ejemplos teoria ejercicios y un acompañamiento todo lo necesario para
+        ingresar y tener un buen desarrollo en el mundo it
+      </p>
+      <span> no poseo certificado</span>
+      <div class="in-login" id="in-login">
+        <i class="fa-solid fa-pen"></i>
+        <i class="fa-solid fa-trash"></i>
+      </div>
+    </div>
+  </div> -->
+</section>
