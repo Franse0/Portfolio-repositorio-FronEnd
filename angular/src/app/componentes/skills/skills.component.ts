@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { PortfolioService } from 'src/app/servicios/portfolio.service';
+import { PortfolioService } from 'src/app/servicios/acerca_de.service';
+import { TecnologiasService } from 'src/app/servicios/tecnologias.service';
 
 @Component({
   selector: 'app-skills',
@@ -8,13 +9,14 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class SkillsComponent {
 
-  constructor(private portfolioService:PortfolioService){};
+  constructor(private tecnologiaService:TecnologiasService){};
   skillsList:any;
 
   ngOnInit():void{
-    this.portfolioService.obtenerDatos().subscribe(data=>{
+    this.tecnologiaService.obtenerDatos().subscribe(data=>{
       console.log("Reciebiendo datos del skills");
-      this.skillsList=data.skills;
+      console.log(data);
+      this.skillsList=data;
     })
   }
 }

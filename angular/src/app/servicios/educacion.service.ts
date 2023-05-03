@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class EducacionServiciosService {
   
-  url:string = 'http://localhost:8080/educacion/ver/';
+  url:string = 'http://localhost:8080/ver/';
   constructor(private http:HttpClient) { }
 
   obtenerDatos():Observable<any>{

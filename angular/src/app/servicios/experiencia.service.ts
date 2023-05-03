@@ -7,10 +7,11 @@ import { Observable } from 'rxjs';
 })
 export class ExperienciaService {
   
-  url:string="http://localhost:8080/ver/";
   constructor(private http:HttpClient) { }
+  
+  url:string="http://localhost:8080/ver/";
 
   obtenerdatos():Observable<any>{
-  return this.http.get(this.url+'experiancia');
+  return this.http.get(this.url+'experiencia');
   }
 }

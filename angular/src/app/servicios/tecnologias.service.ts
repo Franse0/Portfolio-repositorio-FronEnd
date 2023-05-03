@@ -5,16 +5,15 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class PortfolioService {
-
-  constructor(private http:HttpClient) { };
+export class TecnologiasService {
 
   url:string = 'http://localhost:8080/ver/';
 
-  // obtenerDatos():Observable<any>{
-  //   return this.http.get("./assets/data/data.json");
-  // }
+  constructor(private http:HttpClient) {}
+
+
   obtenerDatos():Observable<any>{
-    return this.http.get(this.url+"personas");
+    return this.http.get(this.url+"tecnologia");
+
   }
 }
