@@ -3,8 +3,8 @@
   <div class="img-nav-contianer">
     <img src="./assets/arg-programa.png" class="img-nav" alt="arg programa" />
   </div>
-  <button class="bars">
-    <i class="fa-solid fa-bars" id="bars"></i>
+  <button class="bars" (click)="abrirNav()">
+    <i class="fa-solid fa-bars" id="bars" ></i>
   </button>
   <nav class="nav" id="nav">
     <ul class="nav-list">
@@ -14,7 +14,8 @@
       <li><a href="#skills">Skilss</a></li>
       <li><a href="#contacto">Contacto</a></li>
       <li>
-        <a href="#experiencia"><i class="fa-regular fa-user" id="login"></i></a>
+        <a routerLink="/login"><i class="fa-regular fa-user" id="login" *ngIf="!logueado"></i></a>
+        <a routerLink="/login"><i class="fa-solid  fa-right-from-bracket" id="login" *ngIf="logueado"></i></a>
       </li>
     </ul>
   </nav>

@@ -1,0 +1,13 @@
+
+<div class="body" *ngIf="!loading">
+    <form [formGroup]="recuperarUsuario" (ngSubmit)="recuperarCuenta()">
+        <h1>Recuperar contraseña</h1>
+        <input type="email" name="email" id="" placeholder="email" formControlName="email">
+        <br>
+        <span *ngIf="recuperarUsuario.get('email')?.hasError('required') && recuperarUsuario.get('email')?.touched" class="errorInWindow">El <strong>Correro</strong> es Requerido</span>
+        <br>
+        <button type="submit" [disabled]="recuperarUsuario.invalid"> Enviar</button>
+        <br>
+    </form>
+</div>
+<app-spinner *ngIf="loading"></app-spinner>

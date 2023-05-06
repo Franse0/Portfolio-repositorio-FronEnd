@@ -87,7 +87,7 @@
 
   /* Header y Nav */
 form{
-    display: none;
+    /* display: none; */
 }
 
 .abajo {
@@ -636,5 +636,16 @@ h2{
 
 /* Para esconder los botones de edicion y borrar */
 .in-login{
-    display: none;
+    /* display: none; */
+}
+
+
+.errorInWindow{
+    color: red;
+    text-align: start;
+}
+
+.errorInWindow strong{
+    font-weight: 1800;
+    font-size: 1.1rem;
 }

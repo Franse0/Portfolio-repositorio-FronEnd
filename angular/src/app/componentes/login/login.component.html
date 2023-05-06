@@ -1,0 +1,19 @@
+
+
+
+<div class="body" >
+    <!-- *ngIf="!loading" -->
+    <form  (ngSubmit)="inciarSesion(loginUsuario)" [formGroup]="loginUsuario">
+        <h1>iniciar Sersion</h1>
+        <input type="email" name="email" formControlName="email" id="" placeholder="email">
+        <br>
+        <span *ngIf="loginUsuario.get('email')?.hasError('required') && loginUsuario.get('email')?.touched" class="errorInWindow">El <strong>Correro</strong> es Requerido</span>
+        <br>
+        <input type="password" name="password" formControlName="password" id="" placeholder="contraseña" >
+        <br>
+        <button type="submit" >Enviar</button>
+        <br>
+        <a routerLink="/recuperar">Recuperar contraseña</a>
+    </form>
+</div>
+<!-- <app-spinner *ngIf="loading"></app-spinner> -->

@@ -1,5 +1,5 @@
 <!-- Section 4  skills-->
-<section class="skills">
+<section class="skills" id="skills">
   <h2>habilidades</h2>
   <div class="cards-skills">
     <div class="cardd" *ngFor="let skills of skillsList">
@@ -10,7 +10,7 @@
         class="card-habilida-img"
       />
       <h4>{{skills.nombre_tec}}</h4>
-      <div class="in-login" id="in-login">
+      <div class="in-login" id="in-login" *ngIf="logueado">
         <i class="fa-solid fa-pen"></i>
         <i class="fa-solid fa-trash"></i>
       </div>
@@ -90,42 +90,42 @@
   <div class="cards-skills">
     <div class="cardd">
       <p>ingles: medio</p>
-      <div class="in-login" id="in-login">
+      <div class="in-login" id="in-login" *ngIf="logueado">
         <i class="fa-solid fa-pen"></i>
         <i class="fa-solid fa-trash"></i>
       </div>
     </div>
     <div class="cardd">
       <p>Adaptabilidad</p>
-      <div class="in-login" id="in-login">
+      <div class="in-login" id="in-login" *ngIf="logueado">
         <i class="fa-solid fa-pen"></i>
         <i class="fa-solid fa-trash"></i>
       </div>
     </div>
     <div class="cardd">
       <p>Inteligencia emocional</p>
-      <div class="in-login" id="in-login">
+      <div class="in-login" id="in-login" *ngIf="logueado">
         <i class="fa-solid fa-pen"></i>
         <i class="fa-solid fa-trash"></i>
       </div>
     </div>
     <div class="cardd">
       <p>Resolucion de problemas</p>
-      <div class="in-login" id="in-login">
+      <div class="in-login" id="in-login" *ngIf="logueado">
         <i class="fa-solid fa-pen"></i>
         <i class="fa-solid fa-trash"></i>
       </div>
     </div>
     <div class="cardd">
       <p>Capacidad de colaboracion</p>
-      <div class="in-login" id="in-login">
+      <div class="in-login" id="in-login" *ngIf="logueado">
         <i class="fa-solid fa-pen"></i>
         <i class="fa-solid fa-trash"></i>
       </div>
     </div>
     <div class="cardd">
       <p>Capacidad de recibir retroalimentacion</p>
-      <div class="in-login" id="in-login">
+      <div class="in-login" id="in-login" *ngIf="logueado">
         <i class="fa-solid fa-pen"></i>
         <i class="fa-solid fa-trash"></i>
       </div>

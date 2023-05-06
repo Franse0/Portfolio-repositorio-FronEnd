@@ -9,7 +9,7 @@
         <p>
           {{experiencia.descripcion}}
         </p>
-        <form class="in-login" id="in-login">
+        <form class="in-login" id="in-login" *ngIf="logueado">
           <i class="fa-solid fa-pen"></i>
           <i class="fa-solid fa-trash"></i>
         </form>
