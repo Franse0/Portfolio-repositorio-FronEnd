@@ -1,0 +1,57 @@
+<app-header></app-header>
+<!-- Section 1 -->
+
+<section class="acerca_de" id="acerca_de">
+    <div class="img-profile-continer">
+      <img src="./assets/perfil.jpg" alt="" class="img-profile" />
+    </div>
+    <div class="acerca_de_info-container" *ngFor="let acercade of myPortfolio">
+      <h1>{{acercade.nombre}} {{acercade.nombre}}</h1>
+      <h2>{{acercade.ocupacion}}</h2>
+      <p>
+        {{acercade.sobre_mi}}
+      </p>
+
+      <div class="in-login" id="in-login" *ngIf="logueado" >
+        <i class="fa-solid fa-trash trasj-persona" (click)="borrarr(acercade.id)">
+  
+        </i>
+      </div>
+    </div>
+  </section>
+  
+
+
+  <form [formGroup]="formEdit" (ngSubmit)="agregarPersona()" >
+
+    <div class="form-edit-container">
+      <label for="escuela" >Nombre</label>
+      <input type="text"  formControlName="nombre" >
+    </div>
+    <div class="form-edit-container">
+        <label for="escuela" >Apellido</label>
+        <input type="text"  formControlName="apellido" >
+    </div>
+    <div class="form-edit-container">
+      <label for="escuela" >fecchaNac</label>
+      <input type="text"  formControlName="fechaNac" id="escueala">
+    </div>
+    <div class="form-edit-container">
+      <label for="escuela" >Nacionalidad</label>
+      <input type="text"  formControlName="nacionalidad" id="escueala">
+    </div>
+    <div class="form-edit-container">
+      <label for="escuela" >Email</label>
+      <input type="text"  formControlName="email" id="escueala">
+    </div>
+    <div class="form-edit-container">
+      <label for="escuela" >Sobre_mi</label>
+      <input type="text"  formControlName="sobre_mi" >
+    </div>
+    <div class="form-edit-container">
+      <label for="start" >Ocupacion</label>
+      <input type="text"  formControlName="start" >
+    </div>
+    <button type="submit"> Agregar</button>
+
+  </form>

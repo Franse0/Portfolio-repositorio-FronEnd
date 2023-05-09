@@ -10,12 +10,6 @@ platformBrowserDynamic().bootstrapModule(AppModule)
 
 
 
-// Primera pagina 
-window.addEventListener("scroll", ()=>{
-  let header:any = document.getElementById("header");
-  header.classList.toggle("abajo", window.scrollY>400);
-    
-});
 
 
 

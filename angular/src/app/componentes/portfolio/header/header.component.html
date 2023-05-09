@@ -15,7 +15,7 @@
       <li><a href="#contacto">Contacto</a></li>
       <li>
         <a routerLink="/login"><i class="fa-regular fa-user" id="login" *ngIf="!logueado"></i></a>
-        <a routerLink="/login"><i class="fa-solid  fa-right-from-bracket" id="login" *ngIf="logueado"></i></a>
+        <a  (click)="logOut()" routerLink="/portfolio"><i class="fa-solid  fa-right-from-bracket" id="login" *ngIf="logueado"></i></a>
       </li>
     </ul>
   </nav>

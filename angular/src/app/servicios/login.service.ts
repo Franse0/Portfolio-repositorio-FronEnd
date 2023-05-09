@@ -32,6 +32,7 @@ export class LoginService {
           this.logueado=false;
         }
         console.log(this.logueado)
+        return this.logueado;
       })
     }
   ngOnInit(): void {
@@ -60,6 +61,16 @@ export class LoginService {
       this.loading=false;
       this.toastr.error(this.firebaseError.firebaseCodeError(error.code), 'Error')
     })
+    }
+
+
+  
+    logOutService(){
+      this.aFAuth.signOut().then(()=>{
+        this.loading=true
+        window.location.reload()
+        this.router.navigate(['/portfolio'])
+      })
     }
 
 

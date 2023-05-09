@@ -20,6 +20,17 @@ export class HeaderComponent {
     console.log(nav)
     nav.classList.toggle("nav-visible");
   }
+  
 
+  logOut(){
+    this.login.logOutService();
+    window.location.reload()
+  }
 }
 
+// Primera pagina 
+// window.addEventListener("scroll", ()=>{
+//   let header:any = document.getElementById("header");
+//   header.classList.toggle("abajo", window.scrollY>400);
+    
+// });

@@ -22,6 +22,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule, ToastNoAnimation, ToastNoAnimationModule } from 'ngx-toastr';
 import { SpinnerComponent } from './componentes/spinner/spinner.component';
 import { VerificarCorreoComponent } from './componentes/verificar-correo/verificar-correo.component';
+import { EducacionEditComponent } from './componentes/edicion/educacion-edit/educacion-edit.component';
+import { ExperienciaEditComponent } from './componentes/edicion/experiencia-edit/experiencia-edit.component';
+import { AcercaDeEditComponent } from './componentes/edicion/acerca-de-edit/acerca-de-edit.component';
+import { SkillsEditComponent } from './componentes/edicion/skills-edit/skills-edit.component';
 
 // import { ToastrModule } from 'ngx-toastr';
 // import { RouterModule, Routes } from '@angular/router';
@@ -42,7 +46,11 @@ import { VerificarCorreoComponent } from './componentes/verificar-correo/verific
     RecuperarComponent,
     RegistrarComponent,
     SpinnerComponent,
-    VerificarCorreoComponent
+    VerificarCorreoComponent,
+    EducacionEditComponent,
+    ExperienciaEditComponent,
+    AcercaDeEditComponent,
+    SkillsEditComponent
   ],
   imports: [
     BrowserModule,

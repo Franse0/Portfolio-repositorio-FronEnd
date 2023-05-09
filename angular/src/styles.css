@@ -107,7 +107,7 @@ header{
     top: 0;
     left: 0;
     max-height: 60px;
-    display: none;
+    /* display: none; */
     transition: 5s;
     background: var(--verdeA);
 

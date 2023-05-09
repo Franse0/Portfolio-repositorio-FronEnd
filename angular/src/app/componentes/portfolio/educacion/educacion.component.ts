@@ -5,6 +5,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { Educacion } from 'src/app/modelos/educacion';
 import { LoginComponent } from '../../login/login.component';
 import { LoginService } from 'src/app/servicios/login.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-educacion',
@@ -13,11 +14,12 @@ import { LoginService } from 'src/app/servicios/login.service';
 })
 export class EducacionComponent {
   logueado:boolean=this.login.estaLogueado();
-
+  loading:boolean=this.login.loading;
   educacionList:any;
   formEdit:FormGroup;
+  formBorrar:FormGroup;
 
-  constructor( private educacionService:EducacionServiciosService, private formBuilder:FormBuilder, private login:LoginService){
+  constructor( private educacionService:EducacionServiciosService, private router:Router,private formBuilder:FormBuilder, private login:LoginService){
     this.formEdit = this.formBuilder.group({
       // id:['',[]],
       escuela:['',[] ],
@@ -27,36 +29,34 @@ export class EducacionComponent {
       end:['',[]],
       certificado:['',[]]
     })
-    // this.logueado = this.login.logueado;
-    // , private login:LoginComponent
+
+    this.formBorrar = this.formBuilder.group({
+      identificador:["",[]]
+    })
+
 
   };
 
-  agregarEducacion(){
-    console.log("Agregando educacion")
-    // const datosForm=this.formEdit.value;
-    const e:Educacion= {
-      escuela: this.formEdit.value.escuela,
-      img_school: this.formEdit.value.img_school,
-      descripcion: this.formEdit.value.descripcion,
-      start: this.formEdit.value.start,
-      end: this.formEdit.value.end,
-      certificado: this.formEdit.value.certificado,
-    }
-    // console.log(datosForm)
-    this.educacionService.agregarDatos(e).subscribe(()=>{
+  // agregarEducacion(){
+  //   console.log("Agregando educacion")
+  //   const e:Educacion= {
+  //     escuela: this.formEdit.value.escuela,
+  //     img_school: this.formEdit.value.img_school,
+  //     descripcion: this.formEdit.value.descripcion,
+  //     start: this.formEdit.value.start,
+  //     end: this.formEdit.value.end,
+  //     certificado: this.formEdit.value.certificado,
+  //   }
+  //   this.educacionService.agregarDatos(e).subscribe(()=>{
       
-    });
-    console.log(e);
-  }
-
-
-  // ngOnInit():void{
-  //   this.portfolioService.obtenerDatos().subscribe(data =>{
-  //     console.log("recibiendo info de la educacion");
-  //     this.educacionList=data.educacion;
-  //   })
+  //   });
+  //   console.log(e);
+  //   this.formEdit.reset()
+  //   this.educacionService.obtenerDatos()
   // }
+
+
+
   ngOnInit():void{
     this.educacionService.obtenerDatos().subscribe(data =>{
       console.log("recibiendo info de la educacion");
@@ -64,4 +64,27 @@ export class EducacionComponent {
     })
   }
 
+
+  // borrarEsto(){
+  //     const id = this.formBorrar.value.identificador;
+  //     this.educacionService.borrarDatos(id).subscribe(()=>{})
+  //     this.educacionService.obtenerDatos()
+  // }
+
+  // borrar(id:number){
+  //   try {
+  //     this.educacionService.borrarDatos(id).subscribe(()=>{})
+  //     this.educacionService.obtenerDatos()
+
+  //   } catch (error) {
+  //     console.log(error)     
+  //   }
+  // }
+
+  editar(){
+    this.router.navigate(["/educacionedit"])
+  }
 }
+
+
+

@@ -18,5 +18,9 @@ export class EducacionServiciosService {
   agregarDatos(educacion:Educacion):Observable<Educacion>{
     return this.http.post<Educacion>('http://localhost:8080/new/educacion', educacion)
   }
+
+  borrarDatos(id:number){
+    return this.http.delete<Educacion>(this.url+"borrar/educacion/"+id)
+  }
 }
 

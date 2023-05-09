@@ -1,3 +1,4 @@
+
 <!-- Section 3 educacion -->
 <section class="educacion" id="educacion">
   <h2>Educación</h2>
@@ -19,54 +20,15 @@
       <p>
         {{educacion.descripcion}}
       </p>
-      <i class="fa-solid fa-magnifying-glass"
-        ><a
+      <i class="fa-solid fa-magnifying-glass">
+        <a
           [href]="educacion.certificado"
           target="_blank"
-          >ver certificado</a
-        ></i
-      >
+          >ver certificado</a>
+        </i>  
       <div class="in-login" id="in-login" *ngIf="logueado" >
-        <i class="fa-solid fa-pen" ></i>
-        <i class="fa-solid fa-trash"></i>
+        <i class="fa-solid fa-pen"  (click)="editar()" ></i>
       </div>
     </div>
   </div>
-
-  
-
-  <form [formGroup]="formEdit" (ngSubmit)="agregarEducacion()" *ngIf="logueado">
-
-    <div class="form-edit-container">
-      <label for="escuela" >Escuela</label>
-      <input type="text"  formControlName="escuela" >
-    </div>
-    <div class="form-edit-container">
-      <label for="escuela" >img_school</label>
-      <input type="text"  formControlName="img_school" >
-    </div>
-    <div class="form-edit-container">
-      <label for="escuela" >Descripcion</label>
-      <input type="text"  formControlName="descripcion" >
-    </div>
-    <div class="form-edit-container">
-      <label for="start" >Start</label>
-      <input type="text"  formControlName="start" >
-    </div>
-    <div class="form-edit-container">
-      <label for="escuela" >End</label>
-      <input type="text"  formControlName="end" id="escueala">
-    </div>
-    <div class="form-edit-container">
-      <label for="escuela" >Certificado</label>
-      <input type="text"  formControlName="certificado" id="escueala">
-    </div>
-
-    <button type="submit"> Agregar</button>
-
-  </form>
- 
-
-
-
 </section>

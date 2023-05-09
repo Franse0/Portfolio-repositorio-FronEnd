@@ -1,0 +1,83 @@
+<app-header></app-header>
+<!-- Section 4  skills-->
+
+<section class="skills" id="skills">
+    <h2>Habilidades/Edit</h2>
+    <div class="cards-skills">
+      <div class="cardd" *ngFor="let skills of skillsList">
+        <img
+          id="js"
+          [src]="skills.img_tec"
+          alt="logo"
+          class="card-habilida-img"
+        />
+        <h4>{{skills.nombre_tec}}</h4>
+        <p>{{skills.id}}</p>
+        <div class="in-login" id="in-login" *ngIf="logueado">
+          <i class="fa-solid fa-trash" (click)="borrar(skills.id)"></i>
+        </div>
+      </div>
+    </div>
+  
+    <form (ngSubmit)="agregarSkill()" [formGroup]="formEdit">
+        <div class="input-skill-edit">
+            <label for="">Nombre Tec </label>
+            <input type="text" formControlName="nombre_tec">
+        </div>
+        <div class="input-skill-edit">
+            <label for="">Img Tec </label>
+            <input type="text" formControlName="img_tec">
+        </div>
+        <div class="input-skill-edit">
+            <label for="">Persina id </label>
+            <input type="text" formControlName="persona_id">
+        </div>
+        <button type="submit">Agregar</button>
+    </form>
+
+    
+    <h2>Habilidades Blandas</h2>
+    <div class="cards-skills">
+      <div class="cardd">
+        <p>ingles: medio</p>
+        <div class="in-login" id="in-login" *ngIf="logueado">
+          <i class="fa-solid fa-pen"></i>
+        </div>
+      </div>
+      <div class="cardd">
+        <p>Adaptabilidad</p>
+        <div class="in-login" id="in-login" *ngIf="logueado">
+          <i class="fa-solid fa-pen"></i>
+          <i class="fa-solid fa-trash"></i>
+        </div>
+      </div>
+      <div class="cardd">
+        <p>Inteligencia emocional</p>
+        <div class="in-login" id="in-login" *ngIf="logueado">
+          <i class="fa-solid fa-pen"></i>
+          <i class="fa-solid fa-trash"></i>
+        </div>
+      </div>
+      <div class="cardd">
+        <p>Resolucion de problemas</p>
+        <div class="in-login" id="in-login" *ngIf="logueado">
+          <i class="fa-solid fa-pen"></i>
+          <i class="fa-solid fa-trash"></i>
+        </div>
+      </div>
+      <div class="cardd">
+        <p>Capacidad de colaboracion</p>
+        <div class="in-login" id="in-login" *ngIf="logueado">
+          <i class="fa-solid fa-pen"></i>
+          <i class="fa-solid fa-trash"></i>
+        </div>
+      </div>
+      <div class="cardd">
+        <p>Capacidad de recibir retroalimentacion</p>
+        <div class="in-login" id="in-login" *ngIf="logueado">
+          <i class="fa-solid fa-pen"></i>
+          <i class="fa-solid fa-trash"></i>
+        </div>
+      </div>
+    </div>
+  </section>

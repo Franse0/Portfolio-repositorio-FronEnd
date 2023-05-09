@@ -4,7 +4,7 @@ export class Persona {
     apellido:string=""
     fechaNac:string=""
     nacionalidad:string=""
-    mail:string=""
+    email:string=""
     sobre_mi:string=""
     ocupacion:string=""
 

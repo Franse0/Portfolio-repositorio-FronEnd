@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { PortfolioService } from 'src/app/servicios/acerca_de.service';
+import { LoginService } from 'src/app/servicios/login.service';
 
 @Component({
   selector: 'app-acerca-de',
@@ -8,10 +10,11 @@ import { PortfolioService } from 'src/app/servicios/acerca_de.service';
 })
 export class AcercaDeComponent {
 
-  miPortfolio:any;
+    miPortfolio:any;
+    logueado:boolean=this.login.estaLogueado();
 
 
-    constructor(private datosPortfolio:PortfolioService){ };
+    constructor(private datosPortfolio:PortfolioService, private router:Router,private login:LoginService){ };
 
     ngOnInit(): void{
       this.datosPortfolio.obtenerDatos().subscribe(data => {
@@ -19,5 +22,9 @@ export class AcercaDeComponent {
         console.log(data);
         this.miPortfolio=data;
       });
+    }
+
+    edit(){
+      this.router.navigate(['/acercadeedit'])
     }
 }
