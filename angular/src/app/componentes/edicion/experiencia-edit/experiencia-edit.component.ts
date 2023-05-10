@@ -25,19 +25,21 @@ export class ExperienciaEditComponent {
   constructor(private experienciaService:ExperienciaService, private login:LoginService,private formBuilder:FormBuilder){
     this.formEdit = this.formBuilder.group({
       // id:['',[]],
-      nombreExp:['',[] ],
+      nombre_exp:['',[] ],
       descripcion:['',[]],
-      imgExp:['',[]],
+      img_exp:['',[]],
       persona_id:['',[]],
+      url_git:['',[]]
     })
   };
 
   agregarExperiencia(){
     const experiencia:Experiencia={
-      nombreExp:this.formEdit.value.nombreExo,
+      nombre_exp:this.formEdit.value.nombre_exp,
       descripcion:this.formEdit.value.descripcion,
-      imgExp:this.formEdit.value.imgExp,
-      persona_id:this.formEdit.value.perosna_id,
+      img_exp:this.formEdit.value.img_exp,
+      persona_id:this.formEdit.value.persona_id,
+      url_git:this.formEdit.value.url_git
     }
     this.experienciaService.agregardatos(experiencia).subscribe(()=>{})
     console.log(experiencia);

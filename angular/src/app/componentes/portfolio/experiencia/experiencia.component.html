@@ -1,17 +1,22 @@
 <!-- Section 2 experiencia -->
 <section class="experiencia" id="experiencia">
   <h2>Experiencia</h2>
+  <div class="in-login" id="in-login" *ngIf="logueado">
+    <i class="fa-solid fa-pen" (click)="edit()"></i>
+  </div>
   <div class="experiencia-cards-container">
     <ul>
       <li class="card" *ngFor="let experiencia of experienciaList">
-        <h3>{{experiencia.nombreExp}}</h3>
-        <img [src]="experiencia.imgExp" class="img-card-experiencia" alt="" />
+        <h3>{{experiencia.nombre_exp}}</h3>
+        <img [src]="experiencia.img_exp" class="img-card-experiencia" alt="" />
         <p>
           {{experiencia.descripcion}}
         </p>
-        <form class="in-login" id="in-login" *ngIf="logueado">
+
+        <a [href]="experiencia.url_git" class="linck-repo" target="_blank">Ver reposiroio</a>
+        <div class="in-login" id="in-login" *ngIf="logueado">
           <i class="fa-solid fa-pen" (click)="edit()"></i>
-        </form>
+        </div>
       </li>
     </ul>
   </div>

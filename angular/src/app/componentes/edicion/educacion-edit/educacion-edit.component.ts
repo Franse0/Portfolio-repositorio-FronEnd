@@ -30,7 +30,8 @@ export class EducacionEditComponent {
       descripcion:['',[]],
       start:['',[]],
       end:['',[]],
-      certificado:['',[]]
+      certificado:['',[]],
+      persona_id:['',[]]
     })
 
     this.formBorrar = this.formBuilder.group({
@@ -49,6 +50,7 @@ export class EducacionEditComponent {
       start: this.formEdit.value.start,
       end: this.formEdit.value.end,
       certificado: this.formEdit.value.certificado,
+      persona_id:this.formEdit.value.persona_id
     }
     this.educacionService.agregarDatos(e).subscribe(()=>{
       this.educacionService.obtenerDatos()

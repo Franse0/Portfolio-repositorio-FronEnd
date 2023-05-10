@@ -1,6 +1,7 @@
 export class Experiencia{
-    nombreExp:string=""
+    nombre_exp:string=""
     descripcion:String=""
-    imgExp:String=""
+    img_exp:String=""
     persona_id:number=0
+    url_git:String=""
 }

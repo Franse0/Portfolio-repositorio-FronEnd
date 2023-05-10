@@ -21,9 +21,9 @@ export class AcercaDeEditComponent {
     this.formEdit=this.formBuilder.group({
       nombre:['',[]],
       apellido:['',[]],
-      fechaNac:['',[]],
+      fecha_nac:['',[]],
       nacionalidad:['',[]],
-      email:['',[]],
+      mail:['',[]],
       sobre_mi:['',[]],
       ocupacion:['',[]]
     })
@@ -39,9 +39,9 @@ export class AcercaDeEditComponent {
     const persona:Persona={
       nombre:this.formEdit.value.nombre,
       apellido:this.formEdit.value.apellido,
-      fechaNac:this.formEdit.value.fechaNac,
+      fecha_nac:this.formEdit.value.fecha_nac,
       nacionalidad:this.formEdit.value.nacionalidad,
-      email:this.formEdit.value.email,
+      mail:this.formEdit.value.mail,
       sobre_mi:this.formEdit.value.sobre_mi,
       ocupacion:this.formEdit.value.ocupacion,
     }

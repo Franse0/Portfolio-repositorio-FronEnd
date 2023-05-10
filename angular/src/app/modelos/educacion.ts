@@ -6,5 +6,6 @@ export class Educacion {
     start:string=""
     end:string=""
     certificado:string=""
+    persona_id:string=""
 
 }

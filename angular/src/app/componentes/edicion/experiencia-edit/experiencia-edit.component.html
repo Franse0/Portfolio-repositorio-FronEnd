@@ -6,8 +6,8 @@
     <div class="experiencia-cards-container">
       <ul>
         <li class="card" *ngFor="let experiencia of experienciaList">
-          <h3>{{experiencia.nombreExp}}</h3>
-          <img [src]="experiencia.imgExp" class="img-card-experiencia" alt="" />
+          <h3>{{experiencia.nombre_exp}}</h3>
+          <img [src]="experiencia.img_exp" class="img-card-experiencia" alt="" />
           <p>
             {{experiencia.descripcion}}
           </p>
@@ -22,20 +22,25 @@
         </li>
       </ul>
     </div>
-  </section>
-
-  <form (ngSubmit)="agregarExperiencia()" [formGroup]="formEdit">
+    
+    <form (ngSubmit)="agregarExperiencia()" [formGroup]="formEdit" class="form-edit">
     <label for="">Nombre Expereincia</label>
-    <input type="text" formControlName="nombreExp" >
+    <input type="text" formControlName="nombre_exp" >
     <br>
     <label for="">Descripcion</label>
     <input type="text" formControlName="descripcion">
     <br>
     <label for="">url Imagen</label>
-    <input type="text" formControlName="imgExp" >
+    <input type="text" formControlName="img_exp" >
     <br>
-    <label for="">Id_persona</label>
+    <label for="">Url Git</label>
+    <input type="text" formControlName="url_git" >
+    <br>
+    <label for="">Persona id</label>
     <input type="text" formControlName="persona_id" >
     <br>
     <button type="submit">Cargar</button>
   </form>
+
+
+</section>

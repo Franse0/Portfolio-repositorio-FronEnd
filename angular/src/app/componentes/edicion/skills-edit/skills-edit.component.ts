@@ -51,6 +51,7 @@ export class SkillsEditComponent {
     }
     this.tecnologiaService.agregarDatos(tecnologia).subscribe(()=>{
       this.tecnologiaService.obtenerDatos()
+      this.formEdit.reset()
     })
   }
 

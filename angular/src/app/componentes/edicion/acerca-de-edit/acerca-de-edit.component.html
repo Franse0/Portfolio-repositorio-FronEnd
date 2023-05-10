@@ -6,7 +6,7 @@
       <img src="./assets/perfil.jpg" alt="" class="img-profile" />
     </div>
     <div class="acerca_de_info-container" *ngFor="let acercade of myPortfolio">
-      <h1>{{acercade.nombre}} {{acercade.nombre}}</h1>
+      <h1>{{acercade.nombre}} {{acercade.apellido}}</h1>
       <h2>{{acercade.ocupacion}}</h2>
       <p>
         {{acercade.sobre_mi}}
@@ -22,7 +22,7 @@
   
 
 
-  <form [formGroup]="formEdit" (ngSubmit)="agregarPersona()" >
+  <form [formGroup]="formEdit" (ngSubmit)="agregarPersona()"  class="form_edit">
 
     <div class="form-edit-container">
       <label for="escuela" >Nombre</label>
@@ -34,7 +34,7 @@
     </div>
     <div class="form-edit-container">
       <label for="escuela" >fecchaNac</label>
-      <input type="text"  formControlName="fechaNac" id="escueala">
+      <input type="text"  formControlName="fecha_nac" id="escueala">
     </div>
     <div class="form-edit-container">
       <label for="escuela" >Nacionalidad</label>
@@ -42,7 +42,7 @@
     </div>
     <div class="form-edit-container">
       <label for="escuela" >Email</label>
-      <input type="text"  formControlName="email" id="escueala">
+      <input type="text"  formControlName="mail" id="escueala">
     </div>
     <div class="form-edit-container">
       <label for="escuela" >Sobre_mi</label>
@@ -50,7 +50,7 @@
     </div>
     <div class="form-edit-container">
       <label for="start" >Ocupacion</label>
-      <input type="text"  formControlName="start" >
+      <input type="text"  formControlName="ocupacion" >
     </div>
     <button type="submit"> Agregar</button>
 

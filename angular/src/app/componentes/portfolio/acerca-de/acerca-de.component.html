@@ -3,14 +3,19 @@
   <div class="img-profile-continer">
     <img src="./assets/perfil.jpg" alt="" class="img-profile" />
   </div>
+  <div class="in-login" id="in-login" *ngIf="logueado">
+    <i class="fa-solid fa-pen" (click)="edit()"></i>
+  </div>
   <div class="acerca_de_info-container" *ngFor="let acercaDe of miPortfolio">
-    <h1>{{acercaDe.nombre}} {{acercaDe.nombre}}</h1>
+    <h1>{{acercaDe.nombre}} {{acercaDe.apellido}}</h1>
     <h2>{{acercaDe.ocupacion}}</h2>
     <p>
       {{acercaDe.sobre_mi}}
     </p>
-    <form class="in-login" id="in-login" *ngIf="logueado">
+
+    <p>{{acercaDe.mail}}</p>
+    <div class="in-login" id="in-login" *ngIf="logueado">
       <i class="fa-solid fa-pen" (click)="edit()"></i>
-    </form>
+    </div>
   </div>
 </section>

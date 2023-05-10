@@ -1,3 +1,13 @@
 .trasj-persona{
     color: white;
 }
+
+.form_edit{
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: right;
+    gap: 5px;
+}

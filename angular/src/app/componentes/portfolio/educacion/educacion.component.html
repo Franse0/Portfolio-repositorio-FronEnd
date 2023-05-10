@@ -2,6 +2,9 @@
 <!-- Section 3 educacion -->
 <section class="educacion" id="educacion">
   <h2>Educación</h2>
+  <div class="in-login" id="in-login" *ngIf="logueado" >
+    <i class="fa-solid fa-pen"  (click)="editar()" ></i>
+  </div>
   <p class="intro-education">
     "Como programador full stack junior, valoro mucho la educación y estoy
     comprometido a seguir aprendiendo y mejorando mis habilidades
