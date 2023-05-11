@@ -14,6 +14,7 @@ export class ExperienciaEditComponent {
   experienciaList:any;
   logueado= this.login.estaLogueado();
   formEdit:FormGroup;
+  id:any="";
   
     ngOnInit():void{
       this.experienciaService.obtenerdatos().subscribe(data=>{
@@ -24,7 +25,7 @@ export class ExperienciaEditComponent {
 
   constructor(private experienciaService:ExperienciaService, private login:LoginService,private formBuilder:FormBuilder){
     this.formEdit = this.formBuilder.group({
-      // id:['',[]],
+      id:['',[]],
       nombre_exp:['',[] ],
       descripcion:['',[]],
       img_exp:['',[]],
@@ -35,6 +36,7 @@ export class ExperienciaEditComponent {
 
   agregarExperiencia(){
     const experiencia:Experiencia={
+      id:this.formEdit.value.id,
       nombre_exp:this.formEdit.value.nombre_exp,
       descripcion:this.formEdit.value.descripcion,
       img_exp:this.formEdit.value.img_exp,
@@ -57,4 +59,32 @@ export class ExperienciaEditComponent {
       console.log(error)     
     }
   }
+
+  getExperiencia(id:number){
+    this.experienciaService.obtenerExperiencia(id).subscribe((res)=>{
+      try {
+        console.log(res)
+        const {id,nombre_exp, descripcion, img_exp, url_git, persona_id}=res;
+        this.id = persona_id;
+        this.formEdit.setValue({ id,nombre_exp, descripcion, img_exp, url_git, persona_id,})
+      } catch (error) {
+        console.log(error)
+      }
+    })
+  }
+
+  editarExperiencia(){
+    const experiencia:Experiencia={
+      id:this.formEdit.value.id,
+      nombre_exp:this.formEdit.value.nombre_exp,
+      descripcion:this.formEdit.value.descripcion,
+      img_exp:this.formEdit.value.img_exp,
+      persona_id:this.formEdit.value.persona_id,
+      url_git:this.formEdit.value.url_git
+    }
+    this.experienciaService.editardatos(experiencia).subscribe(()=>{
+      this.experienciaService.obtenerdatos()
+      this.formEdit.reset();
+    })
+    }
 }

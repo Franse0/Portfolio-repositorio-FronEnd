@@ -21,8 +21,18 @@ export class TecnologiasService {
     return this.http.post<Tecnologia>(this.url+'new/tecnologia', tecnologia);
   }
 
+  editarTecnologia(tecnologia: Tecnologia):Observable<Tecnologia>{
+    return this.http.post<Tecnologia>(this.url+"new/tecnologia/", tecnologia)
+  }
   borrarDatos(id:number){
     console.log("borrando")
     return this.http.delete<Tecnologia>(this.url+'borrar/tecnologia/'+id);
   }
+
+  obtenerTecnologia(id:number){
+    return this.http.get<Tecnologia>(this.url+"ver/tecnologia/"+id)
+  }
+
+
+  
 }

@@ -15,6 +15,13 @@ export class EducacionServiciosService {
     return this.http.get(this.url+"ver/educacion");
   }
 
+  obtenerEducacion(id:number):Observable<Educacion>{
+    return this.http.get<Educacion>(this.url+"ver/educacion/"+id);
+  }
+
+  editarEducacion(educacion:Educacion):Observable<Educacion>{
+    return this.http.post<Educacion>(this.url+"editar/educacion", educacion);
+  }
   agregarDatos(educacion:Educacion):Observable<Educacion>{
     return this.http.post<Educacion>('http://localhost:8080/new/educacion', educacion)
   }

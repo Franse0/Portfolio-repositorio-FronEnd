@@ -16,6 +16,14 @@ export class ExperienciaService {
   return this.http.get(this.url+'ver/experiencia');
   }
 
+  obtenerExperiencia(id:number):Observable<Experiencia>{
+    return this.http.get<Experiencia>(this.url+"ver/experiencia/"+ id)
+  }
+
+  editardatos(experiencia:Experiencia):Observable<Experiencia>{
+    return this.http.post<Experiencia>(this.url+"editar/experiencia", experiencia);
+  }
+
   agregardatos(experiencia:Experiencia):Observable<Experiencia>{
     return this.http.post<Experiencia>(this.url+"new/experiencia", experiencia)
   }

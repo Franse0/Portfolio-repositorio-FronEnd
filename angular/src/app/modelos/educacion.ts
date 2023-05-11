@@ -1,5 +1,5 @@
 export class Educacion {
-    // id:number=0
+    id:number=0
     escuela:string=""
     img_school:string=""
     descripcion:string=""

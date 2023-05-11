@@ -544,15 +544,15 @@ h2{
 
 .card-habilida-img{
     width: auto;
-    max-width: 80px;
+    max-width: 60%;
 }
 
 .cardd{
     padding: 2rem;
     border-radius: 50%;
     border: 1px solid black;
-    width: 10%;
-    height: 150px;
+    width: 14%;
+    height: 170px;
     min-width: 150px;
     display: flex;
     flex-direction: column;

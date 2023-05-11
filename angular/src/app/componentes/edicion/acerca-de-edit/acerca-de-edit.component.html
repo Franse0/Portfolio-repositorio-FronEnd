@@ -16,6 +16,10 @@
         <i class="fa-solid fa-trash trasj-persona" (click)="borrarr(acercade.id)">
   
         </i>
+        <div class="edit-element">
+          <button (click)="getPersona(acercade.id)" *ngIf="logueado">Editar</button>
+
+        </div>
       </div>
     </div>
   </section>
@@ -23,6 +27,11 @@
 
 
   <form [formGroup]="formEdit" (ngSubmit)="agregarPersona()"  class="form_edit">
+
+    <div class="form-edit-container">
+      <label for="escuela" >Id</label>
+      <input type="text"  formControlName="id" >
+    </div>
 
     <div class="form-edit-container">
       <label for="escuela" >Nombre</label>
@@ -53,5 +62,7 @@
       <input type="text"  formControlName="ocupacion" >
     </div>
     <button type="submit"> Agregar</button>
+    <button type="button" (click)="actualizarPersona()">Actualizar</button>
+
 
   </form>

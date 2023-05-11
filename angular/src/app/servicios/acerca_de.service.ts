@@ -19,6 +19,14 @@ export class PortfolioService {
     return this.http.get(this.url+"ver/personas");
   }
 
+  obtenerPersona(id:number):Observable<Persona>{
+    return this.http.get<Persona>(this.url+"ver/persona/"+id);
+  }
+
+  editarPersona(persona:Persona):Observable<Persona>{
+    return this.http.post<Persona>(this.url+"editar/persona", persona);
+  }
+
   agregarDatos(persona:Persona):Observable<Persona>{
     return this.http.post<Persona>(this.url+'new/persona',persona)
   }

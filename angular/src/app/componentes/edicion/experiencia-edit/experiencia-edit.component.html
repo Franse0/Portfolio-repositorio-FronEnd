@@ -13,8 +13,9 @@
           </p>
           <p>
             <span *ngIf="logueado">id:{{experiencia.id}}</span>
-
           </p>
+          <button (click)="getExperiencia(experiencia.id)" *ngIf="logueado">Editar</button>
+
           <form class="in-login" id="in-login" *ngIf="logueado">
             <i class="fa-solid fa-pen"></i>
             <i class="fa-solid fa-trash" (click)="borrar(experiencia.id)"></i>
@@ -24,6 +25,9 @@
     </div>
     
     <form (ngSubmit)="agregarExperiencia()" [formGroup]="formEdit" class="form-edit">
+    <label> Id</label>
+    <input type="text"formControlName="id">
+    <br>
     <label for="">Nombre Expereincia</label>
     <input type="text" formControlName="nombre_exp" >
     <br>
@@ -40,6 +44,7 @@
     <input type="text" formControlName="persona_id" >
     <br>
     <button type="submit">Cargar</button>
+    <button type="button" (click)="editarExperiencia()">Actualizar</button>
   </form>
 
 

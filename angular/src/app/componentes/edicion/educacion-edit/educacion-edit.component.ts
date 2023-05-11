@@ -14,6 +14,7 @@ export class EducacionEditComponent {
   formBorrar:FormGroup;
   logueado:boolean=this.login.estaLogueado();
   educacionLista:any;
+  id:String="";
 
 
   ngOnInit(){
@@ -24,7 +25,7 @@ export class EducacionEditComponent {
 
   constructor(private educacionService:EducacionServiciosService, private formBuilder:FormBuilder, private login:LoginService){
     this.formEdit = this.formBuilder.group({
-      // id:['',[]],
+      id:['',[]],
       escuela:['',[] ],
       img_school:['',[]],
       descripcion:['',[]],
@@ -44,6 +45,7 @@ export class EducacionEditComponent {
   agregarEducacion(){
     console.log("Agregando educacion")
     const e:Educacion= {
+      id:this.formEdit.value.id,
       escuela: this.formEdit.value.escuela,
       img_school: this.formEdit.value.img_school,
       descripcion: this.formEdit.value.descripcion,
@@ -78,8 +80,34 @@ borrar(id:number){
   }
 }
 
-
-loguedo(){
-  this.logueado =this.login.estaLogueado()
+getEducacion(id:number){
+    this.educacionService.obtenerEducacion(id).subscribe((res)=>{
+      try {
+        console.log(res)
+        const{id, escuela,img_school,descripcion,start,end,certificado,persona_id}=res;
+        this.id = persona_id;
+        this.formEdit.setValue({id,escuela,img_school,descripcion,start,end,certificado,persona_id})
+      } catch (error) {
+       console.log(error) 
+      }
+    })
 }
+
+actualizarEducacion(){
+  const educacion:Educacion={
+    id:this.formEdit.value.id,
+    escuela: this.formEdit.value.escuela,
+    img_school: this.formEdit.value.img_school,
+    descripcion: this.formEdit.value.descripcion,
+    start: this.formEdit.value.start,
+    end: this.formEdit.value.end,
+    certificado: this.formEdit.value.certificado,
+    persona_id:this.formEdit.value.persona_id
+  }
+  this.educacionService.editarEducacion(educacion).subscribe(()=>{
+    this.educacionService.obtenerDatos()
+    this.formEdit.reset()
+  })
+}
+
 }

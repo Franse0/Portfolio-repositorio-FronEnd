@@ -1,4 +1,5 @@
 export class Experiencia{
+    id:number=0
     nombre_exp:string=""
     descripcion:String=""
     img_exp:String=""

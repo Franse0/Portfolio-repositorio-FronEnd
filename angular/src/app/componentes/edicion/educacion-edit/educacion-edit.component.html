@@ -15,7 +15,7 @@
         class="img-card-education"
       />
       <div class="container-info-education">
-        <h3>{{educacion.nombre}}</h3>
+        <h3>{{educacion.escuela}}</h3>
         <p>
           {{educacion.descripcion}}
         </p>
@@ -28,6 +28,9 @@
           ></i>  <span *ngIf="logueado">{{educacion.id}}</span>
         <div class="in-login" id="in-login" *ngIf="logueado" >
           <i class="fa-solid fa-trash" (click)="borrar(educacion.id)"></i>
+          <br>
+          <button (click)="getEducacion(educacion.id)" *ngIf="logueado">Editar</button>
+
         </div>
       </div>
     </div>
@@ -39,6 +42,10 @@
 
 <form [formGroup]="formEdit" (ngSubmit)="agregarEducacion()" class="form-edit" >
  <h3>Agrega una educacion</h3>
+    <div class="form-edit-container">
+      <label for="escuela" >id</label>
+      <input type="text"  formControlName="id" >
+    </div>
     <div class="form-edit-container">
       <label for="escuela" >Escuela</label>
       <input type="text"  formControlName="escuela" >
@@ -68,6 +75,8 @@
       <input type="text"  formControlName="persona_id" id="escueala">
     </div>
     <button type="submit"> Agregar</button>
+    <button type="button" (click)="actualizarEducacion()">Actualizar</button>
+
 
   </form>
 

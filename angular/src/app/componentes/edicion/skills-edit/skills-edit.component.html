@@ -16,10 +16,17 @@
         <div class="in-login" id="in-login" *ngIf="logueado">
           <i class="fa-solid fa-trash" (click)="borrar(skills.id)"></i>
         </div>
+        <div class="edit-element">
+          <button (click)="getProducto(skills.id)" *ngIf="logueado">Editar</button>
+        </div>
       </div>
     </div>
   
-    <form (ngSubmit)="agregarSkill()" [formGroup]="formEdit">
+    <form (ngSubmit)="agregarSkill()" [formGroup]="formEdit" *ngIf="logueado">
+        <div class="input-skill-edit">
+            <label for="">Id </label>
+            <input type="text" formControlName="id">
+        </div>
         <div class="input-skill-edit">
             <label for="">Nombre Tec </label>
             <input type="text" formControlName="nombre_tec">
@@ -33,6 +40,8 @@
             <input type="text" formControlName="persona_id">
         </div>
         <button type="submit">Agregar</button>
+        <button type="button" (click)="agregarSkill()">Actualizar</button>
+
     </form>
 
     

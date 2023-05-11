@@ -15,10 +15,12 @@ export class AcercaDeEditComponent {
   formEdit:FormGroup;
   myPortfolio:any;
   logueado:boolean=this.login.estaLogueado();
+  id:any="";
 
 
   constructor(private datosPortfolio:PortfolioService,private formBuilder:FormBuilder, private acercadDeService:PortfolioService, private login:LoginService){
     this.formEdit=this.formBuilder.group({
+      id:['',[]],
       nombre:['',[]],
       apellido:['',[]],
       fecha_nac:['',[]],
@@ -37,6 +39,7 @@ export class AcercaDeEditComponent {
 
    agregarPersona(){
     const persona:Persona={
+      id:this.formEdit.value.id,
       nombre:this.formEdit.value.nombre,
       apellido:this.formEdit.value.apellido,
       fecha_nac:this.formEdit.value.fecha_nac,
@@ -61,5 +64,35 @@ export class AcercaDeEditComponent {
     } catch (error) {
       console.log(error)
     }
+  }
+
+  getPersona(id:number){
+    this.acercadDeService.obtenerPersona(id).subscribe((res)=>{
+      try {
+        console.log(res);
+        const{id,nombre,apellido,fecha_nac,nacionalidad,mail,sobre_mi,ocupacion}=res;
+        this.id=id;
+        this.formEdit.setValue({id,nombre,apellido,fecha_nac,nacionalidad,mail,sobre_mi,ocupacion})
+      } catch (error) {
+        console.log(error)
+      }
+    })
+  }
+
+  actualizarPersona(){
+    const persona:Persona={
+      id:this.formEdit.value.id,
+      nombre:this.formEdit.value.nombre,
+      apellido:this.formEdit.value.apellido,
+      fecha_nac:this.formEdit.value.fecha_nac,
+      nacionalidad:this.formEdit.value.nacionalidad,
+      mail:this.formEdit.value.mail,
+      sobre_mi:this.formEdit.value.sobre_mi,
+      ocupacion:this.formEdit.value.ocupacion, 
+    }
+    this.acercadDeService.editarPersona(persona).subscribe(()=>{
+      this.acercadDeService.obtenerDatos()
+      this.formEdit.reset()
+    })
   }
 }
