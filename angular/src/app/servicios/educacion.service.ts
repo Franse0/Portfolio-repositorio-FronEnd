@@ -8,7 +8,7 @@ import { Educacion } from '../modelos/educacion';
 })
 export class EducacionServiciosService {
   
-  url:string = 'http://localhost:8080/';
+  url:string = 'https://portfolio-backend-qzoa.onrender.com/';
   constructor(private http:HttpClient) { }
 
   obtenerDatos():Observable<any>{

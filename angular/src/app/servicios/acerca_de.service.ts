@@ -8,7 +8,7 @@ import { Persona } from '../modelos/persona';
 })
 export class PortfolioService {
 
-  url:string = 'http://localhost:8080/';
+  url:string = 'https://portfolio-backend-qzoa.onrender.com/';
   constructor(private http:HttpClient) { };
 
 
