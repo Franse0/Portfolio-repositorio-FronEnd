@@ -233,8 +233,8 @@ header{
 }
 
 .img-profile{
-    border-radius: 50%;
-    width: 350px;
+    /* border-radius: 50%; */
+    width: 200px;
 }
 
 .acerca_de_info-container{
@@ -651,4 +651,13 @@ h2{
 .errorInWindow strong{
     font-weight: 1800;
     font-size: 1.1rem;
+}
+
+
+.center{
+    display: flex;
+    flex-direction: column;
+    padding-top: 10rem;
+    align-items: center;
+    justify-content: center;
 }

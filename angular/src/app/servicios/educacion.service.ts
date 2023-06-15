@@ -8,7 +8,8 @@ import { Educacion } from '../modelos/educacion';
 })
 export class EducacionServiciosService {
   
-  url:string = 'https://portfolio-backend-qzoa.onrender.com/';
+  url:string = 'https://portfolio-backend-nrlj.onrender.com/';
+
   constructor(private http:HttpClient) { }
 
   obtenerDatos():Observable<any>{
@@ -23,7 +24,7 @@ export class EducacionServiciosService {
     return this.http.post<Educacion>(this.url+"editar/educacion", educacion);
   }
   agregarDatos(educacion:Educacion):Observable<Educacion>{
-    return this.http.post<Educacion>('http://localhost:8080/new/educacion', educacion)
+    return this.http.post<Educacion>(this.url+'new/educacion', educacion)
   }
 
   borrarDatos(id:number){

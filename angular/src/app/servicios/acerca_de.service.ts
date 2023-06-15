@@ -8,7 +8,7 @@ import { Persona } from '../modelos/persona';
 })
 export class PortfolioService {
 
-  url:string = 'https://portfolio-backend-qzoa.onrender.com/';
+  url:string = 'https://portfolio-backend-nrlj.onrender.com/';
   constructor(private http:HttpClient) { };
 
 

@@ -7,8 +7,8 @@ import { Experiencia } from '../modelos/experiencia';
   providedIn: 'root'
 })
 export class ExperienciaService {
-  
-  url:string="https://portfolio-backend-qzoa.onrender.com/";
+
+  url:string = 'https://portfolio-backend-nrlj.onrender.com/';
   constructor(private http:HttpClient) { }
   
 

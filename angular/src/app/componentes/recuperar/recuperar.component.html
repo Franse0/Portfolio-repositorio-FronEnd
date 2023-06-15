@@ -1,5 +1,5 @@
 
-<div class="body" *ngIf="!loading">
+<div class="body center" *ngIf="!loading">
     <form [formGroup]="recuperarUsuario" (ngSubmit)="recuperarCuenta()">
         <h1>Recuperar contraseña</h1>
         <input type="email" name="email" id="" placeholder="email" formControlName="email">

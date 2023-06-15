@@ -8,7 +8,7 @@ import { Tecnologia } from '../modelos/tecnologias';
 })
 export class TecnologiasService {
 
-  url:string = 'https://portfolio-backend-qzoa.onrender.com/';
+  url:string = 'https://portfolio-backend-nrlj.onrender.com/';
 
   constructor(private http:HttpClient) {}
 

@@ -8,11 +8,13 @@ import { LoginService } from 'src/app/servicios/login.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  // logueado:boolean=false;
-  logueado:boolean=this.login.estaLogueado()
+  logueado:boolean=this.login.estaLogueado();
+
+  // logueado:boolean=this.login.estaLogueado()
   constructor(private login:LoginService){
-  
     
+  this.logueado = this.login.estaLogueado();
+
   
   }
   abrirNav(){
@@ -27,7 +29,6 @@ export class HeaderComponent {
     window.location.reload()
   }
 }
-
 // Primera pagina 
 // window.addEventListener("scroll", ()=>{
 //   let header:any = document.getElementById("header");
