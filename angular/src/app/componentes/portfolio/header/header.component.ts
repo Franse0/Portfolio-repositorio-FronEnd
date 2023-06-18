@@ -22,7 +22,6 @@ export class HeaderComponent {
     console.log(nav)
     nav.classList.toggle("nav-visible");
   }
-  
 
   logOut(){
     this.login.logOutService();

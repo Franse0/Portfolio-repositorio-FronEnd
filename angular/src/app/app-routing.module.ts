@@ -24,7 +24,7 @@ const routes: Routes = [
   {path:'acercadeedit', component:AcercaDeEditComponent},
   {path:'tecnologiasedit', component:SkillsEditComponent},
   // Routings por defecto
-  {path: "**", redirectTo: 'portfolio', pathMatch:'full' }
+  {path: "**", redirectTo: '/', pathMatch:'full' }
 
 
 
